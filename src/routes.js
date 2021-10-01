@@ -4,21 +4,12 @@ const _ = require("underscore");
 const axios = require("axios");
 const airports = require("./airports.json");
 
-const k = [
-  { chunk: "1987bed" },
-  { chunk: "611dbf9ae5" },
-  { chunk: "064462f7" },
-  { chunk: "faa406e" },
-];
-
 router.get("/flights", (req, res) => {
   console.log(req.query);
   axios
     .get("http://api.aviationstack.com/v1/flights", {
       params: {
-        access_key: k.reduce((result, x) => {
-          return result.concat(x.chunk);
-        }, ""),
+        access_key: APIKEY,
         ...req.query,
       },
     })
