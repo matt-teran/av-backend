@@ -1,10 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const helmet = require('helmet');
 
 const app = express();
 
 app.use(cors());
+app.use(helmet());
 
 app.use(bodyParser.json());
 
@@ -17,8 +19,6 @@ app.listen(3000, () => {
 
 
 //create 404 page
-//add api keys to github secrets
-//replace hardcoded keys to environment variables
 //add helmet (security)
 //add compression
 //add morgan (logging) 
