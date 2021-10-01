@@ -9,7 +9,7 @@ router.get("/flights", (req, res) => {
   axios
     .get("http://api.aviationstack.com/v1/flights", {
       params: {
-        access_key: APIKEY,
+        access_key: process.env.APIKEY,
         ...req.query,
       },
     })
