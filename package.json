@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon src/index.js",
     "lint": "echo '=> linting' && jshint src/*.js",
     "test": "echo '=> testing' && mocha test/",
-    "pretest": "npm run lint -s"
+    "pretest": "npm run lint -s",
+    "build": "echo '=> building' && npm run test -s",
+    "server": "http-server dist/public",
+    "watch": "watch 'npm run minify:js' src/"
   },
   "author": "",
   "license": "ISC",
@@ -15,12 +18,16 @@
     "axios": "^0.21.4",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-minify": "^1.0.0",
     "helmet": "^4.6.0",
     "underscore": "^1.13.1"
   },
   "devDependencies": {
+    "http-server": "^13.0.2",
     "jshint": "^2.13.1",
     "mocha": "^9.1.2",
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.13",
+    "uglify-js": "^3.14.2",
+    "watch": "^1.0.2"
   }
 }

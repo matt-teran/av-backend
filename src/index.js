@@ -2,9 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const helmet = require('helmet');
+const minify = require('express-minify');
 
 const app = express();
 
+app.use(minify());
 app.use(cors());
 app.use(helmet());
 
@@ -23,3 +25,5 @@ app.listen(3000, () => {
 //add compression
 //add morgan (logging) 
 //add build script to package.json
+
+//
