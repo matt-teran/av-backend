@@ -5,11 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js"
-    // "lint": "echo '=> linting' && jshint src/*.js",
-    // "test": "echo '=> testing' && mocha test/",
-    // "pretest": "npm run lint -s",
-    // "build": "echo '=> building' && npm run test -s",
-    // "watch": "watch 'npm run minify:js' src/"
   },
   "author": "",
   "license": "ISC",
