@@ -10,7 +10,7 @@ app.use(helmet());
 
 app.use(bodyParser.json());
 
-app.use("/", require("./src/routes"));
+app.use("/", require("./routes"));
 
 
 app.listen(3000, () => {
@@ -22,4 +22,4 @@ app.listen(3000, () => {
 //add helmet (security)
 //add compression
 //add morgan (logging) 
-//
+//add build script to package.json

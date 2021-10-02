@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "lint": "echo '=> linting' && jshint src/*.js",
+    "test": "echo '=> testing' && mocha test/"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
+    "mocha": "^9.1.2",
     "underscore": "^1.13.1"
   },
   "devDependencies": {
