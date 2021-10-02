@@ -31,7 +31,7 @@ router.get("/airports", (req, res) => {
 
 router.use((req, res) => {
     res.status(404).send('404');
-})
+});
 
 // routes
 module.exports = router;
