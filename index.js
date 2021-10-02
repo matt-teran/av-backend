@@ -12,7 +12,7 @@ app.use(helmet());
 
 app.use(bodyParser.json());
 
-app.use("/", require("./routes"));
+app.use("/", require("./src/routes"));
 
 app.listen(3000, () => {
   console.log("Listening...");
