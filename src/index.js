@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 
 app.use("/", require("./routes"));
 
-
 app.listen(3000, () => {
   console.log("Listening...");
 });
