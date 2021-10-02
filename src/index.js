@@ -6,7 +6,7 @@ const minify = require('express-minify');
 
 const app = express();
 
-app.use(minify());
+// app.use(minify());
 app.use(cors());
 app.use(helmet());
 

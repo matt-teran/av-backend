@@ -9,7 +9,6 @@
     "test": "echo '=> testing' && mocha test/",
     "pretest": "npm run lint -s",
     "build": "echo '=> building' && npm run test -s",
-    "server": "http-server dist/public",
     "watch": "watch 'npm run minify:js' src/"
   },
   "author": "",
